@@ -28,3 +28,33 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Sanskrit text styling */
+.sanscript-text {
+  font-size: 1.3em;
+  line-height: 1.8;
+  font-family: 'Noto Sans Devanagari', 'Noto Serif Devanagari', 'Mangal', 'Kokila', sans-serif;
+  color: #1a1a1a;
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin: 0.5em 0;
+  background-color: rgba(255, 248, 240, 0.5);
+  border-left: 3px solid var(--ifm-color-primary);
+  border-radius: 4px;
+}
+
+[data-theme='dark'] .sanscript-text {
+  color: #e8e8e8;
+  background-color: rgba(40, 40, 50, 0.5);
+}
+
+/* Latin text styling */
+.latin-text {
+  font-style: italic;
+  color: #2e5090;
+  font-weight: 500;
+}
+
+[data-theme='dark'] .latin-text {
+  color: #88b4ff;
+}
