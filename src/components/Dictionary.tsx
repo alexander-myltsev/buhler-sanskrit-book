@@ -7,7 +7,8 @@ import otherDictionary from '../dictionary/other.tsv';
 
 interface DictionaryProps {
     name: 'verb' | 'noun' | 'other';
-    tag: string;
+    lesson: string;
+    tag?: string;
     format?: string;
 }
 
@@ -17,12 +18,17 @@ function parseDictionaryTsv(tsvContent: string): Array<Record<string, string>> {
         header: true,
         skipEmptyLines: true,
         transformHeader: (header: string) => header.trim(),
-        transform: (value: string) => value.trim()
+        transform: (value: string) => value.trim(),
+        complete: (results) => {
+            const criticalErrors = results.errors.filter(error =>
+                error.type !== 'FieldMismatch' ||
+                (error.type === 'FieldMismatch' && error.code !== 'TooFewFields')
+            );
+            if (criticalErrors.length > 0) {
+                console.warn('Critical TSV parsing errors:', criticalErrors);
+            }
+        }
     });
-
-    if (result.errors.length > 0) {
-        console.warn('TSV parsing errors:', result.errors);
-    }
 
     return result.data as Array<Record<string, string>>;
 }
@@ -30,12 +36,13 @@ function parseDictionaryTsv(tsvContent: string): Array<Record<string, string>> {
 /**
  * Component to display dictionary entries from TSV files
  * @param name - The dictionary file name (verb, noun, or other)
- * @param tag - The tag to filter entries by (e.g., "lesson1")
+ * @param lesson - The lesson to filter entries by (e.g., "lesson1")
+ * @param tag - Optional secondary tag filter (e.g., "lesson3-VI")
  * @param format - Custom format string with column placeholders marked with $ (e.g., "$root - $translation")
  */
-const Dictionary: React.FC<DictionaryProps> = ({name, tag, format}) => {
+const Dictionary: React.FC<DictionaryProps> = ({name, lesson, tag, format}) => {
     if (!format) {
-        return <div style={{ color: 'red', fontWeight: 'bold' }}>Dictionary: no format provided</div>;
+        return <div style={{color: 'red', fontWeight: 'bold'}}>Dictionary: no format provided</div>;
     }
 
     let tsvDictionaryContent: string;
@@ -54,10 +61,14 @@ const Dictionary: React.FC<DictionaryProps> = ({name, tag, format}) => {
     }
 
     const allEntries = parseDictionaryTsv(tsvDictionaryContent);
-    const filteredEntries = allEntries.filter(entry => entry.tag === tag);
+    let filteredEntries = allEntries.filter(entry => entry.lesson === lesson);
+    if (tag) {
+        filteredEntries = filteredEntries.filter(entry => entry.tag === tag);
+    }
 
     if (filteredEntries.length === 0) {
-        return <div>No entries found for tag: {tag}</div>;
+        const filterMessage = tag ? `lesson: ${lesson} and tag: ${tag}` : `lesson: ${lesson}`;
+        return <div>No entries found for {filterMessage}</div>;
     }
 
     const getMainColumns = () => {

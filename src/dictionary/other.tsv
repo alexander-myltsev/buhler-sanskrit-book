@@ -1,30 +1,30 @@
-id	entity	translation	tag
-1	atas	отсюда, поэтому	lesson1
-2	atra	здесь, сюда	lesson1
-3	adhunā	теперь, сейчас	lesson1
-4	adya	сегодня	lesson1
-5	itas	отсюда, поэтому	lesson1
-6	iti	так, конец прямой речи	lesson1
-7	ittham	так	lesson1
-8	iha	здесь	lesson1
-9	eva	именно, только	lesson1
-10	evam	так	lesson1
-11	katham	как?	lesson1
-12	kadā	когда?	lesson1
-13	kutas	откуда? почему?	lesson1
-14	kutra	где? куда?	lesson1
-15	kva	где? куда?	lesson1
-16	ca	и	lesson1
-17	tatas	оттуда, потому, потом	lesson1
-18	tathā	так	lesson1
-19	tatra	там, туда	lesson1
-20	tadā	тогда	lesson1
-21	tu, kiṃtu	но, же	lesson1
-22	punar	снова, опять	lesson1
-23	yatas	откуда, почему	lesson1
-24	yathā	как	lesson1
-25	yatra	где, куда	lesson1
-26	yadā	когда, если	lesson1
-27	sadā	всегда	lesson1
-28	sarvatra	повсюду, везде	lesson1
-29	he	о!	lesson1
+id	entity	translation	lesson	tag
+1	atas	отсюда, поэтому	1
+2	atra	здесь, сюда	1
+3	adhunā	теперь, сейчас	1
+4	adya	сегодня	1
+5	itas	отсюда, поэтому	1
+6	iti	так, конец прямой речи	1
+7	ittham	так	1
+8	iha	здесь	1
+9	eva	именно, только	1
+10	evam	так	1
+11	katham	как?	1
+12	kadā	когда?	1
+13	kutas	откуда? почему?	1
+14	kutra	где? куда?	1
+15	kva	где? куда?	1
+16	ca	и	1
+17	tatas	оттуда, потому, потом	1
+18	tathā	так	1
+19	tatra	там, туда	1
+20	tadā	тогда	1
+21	tu, kiṃtu	но, же	1
+22	punar	снова, опять	1
+23	yatas	откуда, почему	1
+24	yathā	как	1
+25	yatra	где, куда	1
+26	yadā	когда, если	1
+27	sadā	всегда	1
+28	sarvatra	повсюду, везде	1
+29	he	о!	1
