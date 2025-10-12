@@ -1,0 +1,65 @@
+id	root	class	stem	translation	tag
+1	pat	1		падать, лететь	lesson1
+2	dah	1		гореть, жечь	lesson1
+3	yaj	1		приносить жертву (кому-Acc., что-In. для кого-D.)	lesson1
+4	śaṃs	1		прославлять	lesson1
+5	vas	1		жить, обитать	lesson1
+6	rakṣ	1		защищать	lesson1
+7	jīv	1		жить	lesson1
+8	car	1		ходить, совершать, пастись	lesson1
+9	nam	1		кланяться (D.), почитать	lesson1
+10	pac	1		варить, готовить	lesson1
+11	dhāv	1		бежать	lesson1
+12	tyaj	1		покидать	lesson1
+13	vah	1		нести, течь, дуть, веять	lesson1
+14	ji	1		побеждать, завоевывать	lesson2
+15	nī	1		вести, направлять	lesson2
+16	bhū	1		быть, становиться, происходить	lesson2
+17	smṛ	1		вспоминать	lesson2
+18	tṛ	1		переправлять, спасать	lesson2
+19	vṛṣ	1		идти (о дожде), осыпать дарами	lesson2
+20	pā	1		пить	lesson2
+21	sthā	1		стоять, находиться	lesson2
+22	dṛś	1		смотреть, видеть	lesson2
+23	gam	1		идти, ходить	lesson2
+24	yam	1		давать	lesson2
+25	kṣip	6	kṣipa	бросать	lesson3-VI
+26	viś	6	viśa	входить	lesson3-VI
+27	pracch	6	pṛccha	спрашивать	lesson3-VI
+28	karṣ	6	kṛṣa	пахать	lesson3-VI
+29	sparś	6	spṛśa	прикасаться	lesson3-VI
+30	iṣ	6	iccha	искать, желать	lesson3-VI
+31	diś	6	diśa	показывать	lesson3-VI
+32	sic	6	siñca	капать, поливать	lesson3-VI
+33	sarj	6	sṛja	творить, выпускать	lesson3-VI
+34	hvā	1	hvaya	звать	lesson3-I
+35	sad	1	sīda	сидеть	lesson3-I
+36	guh	1	gūha	прятать	lesson3-I
+37	muc	6	muñca	освобождать, отпускать	lesson4-VI
+38	kart	6	kṛnta	резать	lesson4-VI
+39	lip	6	limpa	мазать	lesson4-VI
+40	lup	6	lumpa	ломать, грабить	lesson4-VI
+41	gup	1	gopāya	стеречь, защищать	lesson4-I
+42	ruh	1	ruha	расти	lesson4-I
+43	lubh	4		желать	lesson5
+44	krudh	4		гневаться (+D., Gen.)	lesson5
+45	śuṣ	4		засыхать	lesson5
+46	kup	4		гневаться, сердиться (+D.)	lesson5
+47	as	4		бросать, метать	lesson5
+48	naś	4		погибать, обращаться в бегство	lesson5
+49	snih	4		любить, быть расположенным к (+Gen., Loc.)	lesson5
+50	likh	6		писать	lesson5
+51	ā-gam	1		приходить	lesson5
+52	ā-ruh	1		влезать, подниматься на, восходить	lesson5
+53	ā-kram	4		наступать, нападать (тж. I krāma)	lesson6
+54	div	4		играть	lesson6
+55	mad	4	mādya	пьянеть	lesson6
+56	tuṣ	4		радоваться, быть довольным	lesson6
+57	tam	4		быть печальным	lesson6
+58	śam	4		успокаиваться, тухнуть	lesson6
+59	śram	4		уставать	lesson6
+60	bhram	4		бродить, блуждать	lesson6
+61	vyadh	4	vidhya	пронзать, попадать	lesson6
+62	ā-cam	1	ā-cama	пить, зачерпывать	lesson6
+63	ar	1	ṛccha	идти, падать на к.-л.	lesson6
+64	har	1		брать, отнимать, похищать	lesson6

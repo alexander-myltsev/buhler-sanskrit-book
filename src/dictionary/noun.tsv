@@ -1,0 +1,74 @@
+id	word	gender	translation	tag
+1	deva	m	бог	lesson2
+2	nara	m	мужчина, человек	lesson2
+3	putra	m	сын	lesson2
+4	gaja	m	слон	lesson2
+5	grāma	m	деревня	lesson2
+6	nṛpa	m	царь	lesson2
+7	phala	n	плод, награда	lesson2
+8	gṛha	n	дом	lesson2
+9	nagara	n	город	lesson2
+10	jala	n	вода	lesson2
+11	kṣīra	n	молоко	lesson2
+12	dāna	n	подарок, подаяние	lesson2
+13	megha	m	облако	lesson3
+14	hasta	m	рука	lesson3
+15	mārga	m	дорога	lesson3
+16	kunta	m	копье	lesson3
+17	kaṭa	m	циновка	lesson3
+18	bāla	m	мальчик	lesson3
+19	śara	m	стрела	lesson3
+20	dhana	n	деньги, богатство	lesson3
+21	sukha	n	счастье, благо	lesson3
+22	lāṅgala	n	плуг	lesson3
+23	kṣetra	n	поле	lesson3
+24	viṣa	n	яд	lesson3
+25	jana	m	человек, люди	lesson4
+26	vṛkṣa	m	дерево	lesson4
+27	śiva	m	имя бога	lesson4
+28	rāma	m	имя героя	lesson4
+29	śara	m	стрела	lesson4
+30	pāpa	n	грех, зло	lesson4
+31	duḥkha	n	несчастье, горе	lesson4
+32	satya	n	правда, истина	lesson4
+33	agni	m	огонь	lesson4
+34	ari	m	враг	lesson4
+35	ṛṣi	m	пророк, мудрец	lesson4
+36	kavi	m	поэт	lesson4
+37	asi	m	меч	lesson4
+38	pāṇi	m	рука	lesson4
+39	giri	m	гора	lesson4
+40	hari	m	имя бога	lesson4
+41	vāri	n	вода	lesson4
+42	bhānu	m	солнце	lesson5
+43	śatru	m	враг	lesson5
+44	bāhu	m	рука	lesson5
+45	vāyu	m	ветер	lesson5
+46	viṣṇu	m	имя бога	lesson5
+47	bindu	m	капля	lesson5
+48	paraśu	m	топор	lesson5
+49	guru	m	учитель	lesson5
+50	maṇi	m	драгоценный камень	lesson5
+51	udadhi	m	океан	lesson5
+52	pāda	m	нога, луч, четверть	lesson5
+53	śiṣya	m	ученик	lesson5
+54	anna	n	еда, корм	lesson5
+55	sūkta	n	ведийский гимн	lesson5
+56	śikhara	m	вершина	lesson5
+57	aśva	m	лошадь	lesson5
+58	ratna	n	драгоценный камень	lesson5
+59	pattra (patra)	n	письмо	lesson5
+60	rāśi	m	куча	lesson5
+61	madhu	n	мед	lesson6
+62	aśru	n	слеза	lesson6
+63	vasu	n	богатство, добро, вещи	lesson6
+64	mṛtyu	m	смерть	lesson6
+65	ali	m	пчела	lesson6
+66	nṛpati	m	царь	lesson6
+67	netra	n	глаз	lesson6
+68	mukha	n	рот, лицо	lesson6
+69	ṛkṣa	m	медведь	lesson6
+70	akṣa	m	кость (игральная)	lesson6
+71	kṣatriya	m	воин	lesson6
+72	adharma	m	несправедливость	lesson6
+73	kopa	m	гнев	lesson6

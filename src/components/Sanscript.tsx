@@ -12,7 +12,7 @@ interface SanscriptProps {
  * Component to convert transliterated Sanskrit text to Devanagari script
  * @param children - The transliterated text (for tag syntax)
  * @param text - The transliterated text (for prop syntax)
- * @param from - Source transliteration scheme (default: 'itrans')
+ * @param from - Source transliteration scheme (default: 'slp1')
  * @param to - Target script (default: 'devanagari')
  */
 const SanscriptComponent: React.FC<SanscriptProps> = ({

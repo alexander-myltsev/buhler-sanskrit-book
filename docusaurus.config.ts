@@ -35,6 +35,26 @@ const config: Config = {
     locales: ['en'],
   },
 
+  plugins: [
+    function tsvLoaderPlugin() {
+      return {
+        name: 'tsv-loader-plugin',
+        configureWebpack() {
+          return {
+            module: {
+              rules: [
+                {
+                  test: /\.tsv$/,
+                  type: 'asset/source',
+                },
+              ],
+            },
+          };
+        },
+      };
+    },
+  ],
+
   presets: [
     [
       'classic',
