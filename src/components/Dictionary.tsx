@@ -34,6 +34,10 @@ function parseDictionaryTsv(tsvContent: string): Array<Record<string, string>> {
  * @param format - Custom format string with column placeholders marked with $ (e.g., "$root - $translation")
  */
 const Dictionary: React.FC<DictionaryProps> = ({name, tag, format}) => {
+    if (!format) {
+        return <div style={{ color: 'red', fontWeight: 'bold' }}>Dictionary: no format provided</div>;
+    }
+
     let tsvDictionaryContent: string;
     switch (name) {
         case 'verb':
