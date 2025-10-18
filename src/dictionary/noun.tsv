@@ -1,16 +1,4 @@
 id	word	gender	translation	lesson	tag
-1	deva	m	бог	2
-2	nara	m	мужчина, человек	2
-3	putra	m	сын	2
-4	gaja	m	слон	2
-5	grāma	m	деревня	2
-6	nṛpa	m	царь	2
-7	phala	n	плод, награда	2
-8	gṛha	n	дом	2
-9	nagara	n	город	2
-10	jala	n	вода	2
-11	kṣīra	n	молоко	2
-12	dāna	n	подарок, подаяние	2
 13	megha	m	облако	3
 14	hasta	m	рука	3
 15	mārga	m	дорога	3
@@ -23,6 +11,18 @@ id	word	gender	translation	lesson	tag
 22	lāṅgala	n	плуг	3
 23	kṣetra	n	поле	3
 24	viṣa	n	яд	3
+1	deva	m	бог	2	m
+2	nara	m	мужчина, человек	2	m
+3	putra	m	сын	2	m
+4	gaja	m	слон	2	m
+5	grāma	m	деревня	2	m
+6	nṛpa	m	царь	2	m
+7	phala	n	плод, награда	2	n
+8	gṛha	n	дом	2	n
+9	nagara	n	город	2	n
+10	jala	n	вода	2	n
+11	kṣīra	n	молоко	2	n
+12	dāna	n	подарок, подаяние	2	n
 25	jana	m	человек, люди	4
 26	vṛkṣa	m	дерево	4
 27	śiva	m	имя бога	4
