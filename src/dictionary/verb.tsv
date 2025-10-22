@@ -23,8 +23,8 @@ id	root	class	stem	translation	lesson	tag
 22	dṛś	1	paśya	смотреть, видеть	2	has_stem
 23	gam	1	gaccha	идти, ходить	2	has_stem
 24	yam	1	yaccha	давать	2	has_stem
-25	kṣip	6	kṣipa	бросать	3	VI
-26	viś	6	viśa	входить	3	VI
+25	kṣip	6		бросать	3	VI-no_stem
+26	viś	6		входить	3	VI-no_stem
 27	pracch	6	pṛccha	спрашивать	3	VI
 28	karṣ	6	kṛṣa	пахать	3	VI
 29	sparś	6	spṛśa	прикасаться	3	VI
