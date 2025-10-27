@@ -1,5 +1,8 @@
 /.idea
 
+# Project
+/tmp
+
 # Dependencies
 /node_modules
 
