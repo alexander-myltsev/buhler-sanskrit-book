@@ -58,3 +58,13 @@
 [data-theme='dark'] .latin-text {
   color: #88b4ff;
 }
+
+/* Grammatical term styling */
+.grammatical-term {
+  color: #29d855;
+  font-weight: 500;
+}
+
+[data-theme='dark'] .grammatical-term {
+  color: #f9e718;
+}
