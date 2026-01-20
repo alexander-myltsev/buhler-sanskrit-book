@@ -3,10 +3,11 @@ import Papa from 'papaparse';
 
 import verbDictionary from '../dictionary/verb.tsv';
 import nounDictionary from '../dictionary/noun.tsv';
+import adjectiveDictionary from '../dictionary/adjective.tsv';
 import otherDictionary from '../dictionary/other.tsv';
 
 interface DictionaryProps {
-    name: 'verb' | 'noun' | 'other';
+    name: 'verb' | 'noun' | 'adjective' | 'other';
     lesson: string;
     tag?: string;
     format?: string;
@@ -35,7 +36,7 @@ function parseDictionaryTsv(tsvContent: string): Array<Record<string, string>> {
 
 /**
  * Component to display dictionary entries from TSV files
- * @param name - The dictionary file name (verb, noun, or other)
+ * @param name - The dictionary file name (verb, noun, adjective, or other)
  * @param lesson - The lesson to filter entries by (e.g., "lesson1")
  * @param tag - Optional secondary tag filter (e.g., "lesson3-VI")
  * @param format - Custom format string with column placeholders marked with $ (e.g., "$root - $translation")
@@ -52,6 +53,9 @@ const Dictionary: React.FC<DictionaryProps> = ({name, lesson, tag, format}) => {
             break;
         case 'noun':
             tsvDictionaryContent = nounDictionary;
+            break;
+        case 'adjective':
+            tsvDictionaryContent = adjectiveDictionary;
             break;
         case 'other':
             tsvDictionaryContent = otherDictionary;
@@ -76,6 +80,8 @@ const Dictionary: React.FC<DictionaryProps> = ({name, lesson, tag, format}) => {
             case 'verb':
                 return {sanskrit: 'root', translation: 'translation'};
             case 'noun':
+                return {sanskrit: 'word', translation: 'translation'};
+            case 'adjective':
                 return {sanskrit: 'word', translation: 'translation'};
             case 'other':
                 return {sanskrit: 'entity', translation: 'translation'};
