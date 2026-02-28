@@ -2,6 +2,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import grammaticalTermShorthand from './src/remark/grammaticalTermShorthand';
+import grammaticalTermSanskritShorthand from './src/remark/grammaticalTermSanskritShorthand';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -72,7 +73,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          remarkPlugins: [grammaticalTermShorthand],
+          remarkPlugins: [grammaticalTermShorthand, grammaticalTermSanskritShorthand],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:

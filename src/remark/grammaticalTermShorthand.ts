@@ -1,15 +1,20 @@
 import type {Node} from 'unist';
 import {visit} from 'unist-util-visit';
 
-const GT_REGEX = /__GT_(.+?)__/g;
-const GT_PREFIX = 'GT_';
+type MdxNode = { type: string; name: string; attributes: unknown[]; children: unknown[] };
 
-function makeGrammaticalTermSpan(term: string): { type: string; name: string; attributes: unknown[]; children: unknown[] } {
+interface ShorthandConfig {
+    regex: RegExp;
+    prefix: string;
+    makeSpan: (term: string) => MdxNode;
+}
+
+function makeTextSpan(className: string, term: string): MdxNode {
     return {
         type: 'mdxJsxTextElement',
         name: 'span',
         attributes: [
-            {type: 'mdxJsxAttribute', name: 'className', value: 'grammatical-term'},
+            {type: 'mdxJsxAttribute', name: 'className', value: className},
         ],
         children: [{type: 'text', value: term}],
     };
@@ -28,17 +33,17 @@ function extractTextFromNode(node: { type?: string; value?: string; children?: u
     return null;
 }
 
-function expandTextWithPattern(value: string): unknown[] {
+function expandTextWithPattern(value: string, config: ShorthandConfig): unknown[] {
     const parts: unknown[] = [];
     let lastIndex = 0;
     let match: RegExpExecArray | null;
-    GT_REGEX.lastIndex = 0;
-    while ((match = GT_REGEX.exec(value)) !== null) {
+    config.regex.lastIndex = 0;
+    while ((match = config.regex.exec(value)) !== null) {
         if (match.index > lastIndex) {
             parts.push({type: 'text', value: value.slice(lastIndex, match.index)});
         }
-        parts.push(makeGrammaticalTermSpan(match[1]));
-        lastIndex = GT_REGEX.lastIndex;
+        parts.push(config.makeSpan(match[1]));
+        lastIndex = config.regex.lastIndex;
     }
     if (lastIndex < value.length) {
         parts.push({type: 'text', value: value.slice(lastIndex)});
@@ -50,8 +55,8 @@ interface ParentWithChildren {
     children: unknown[];
 }
 
-export default function grammaticalTermShorthand() {
-    return (ast: Node) => {
+export function createShorthandPlugin(config: ShorthandConfig) {
+    return () => (ast: Node) => {
         visit(ast, (node: { type?: string; value?: string; children?: unknown[] }) => {
             const parent = node as ParentWithChildren;
             if (!parent.children || !Array.isArray(parent.children)) return;
@@ -60,11 +65,11 @@ export default function grammaticalTermShorthand() {
             for (const child of parent.children) {
                 const c = child as { type?: string; value?: string; children?: unknown[] };
                 const text = extractTextFromNode(c);
-                if (text !== null && text.startsWith(GT_PREFIX)) {
-                    newChildren.push(makeGrammaticalTermSpan(text.slice(GT_PREFIX.length)));
-                } else if (c.type === 'text' && typeof c.value === 'string' && GT_REGEX.test(c.value)) {
-                    GT_REGEX.lastIndex = 0;
-                    newChildren.push(...expandTextWithPattern(c.value));
+                if (text !== null && text.startsWith(config.prefix)) {
+                    newChildren.push(config.makeSpan(text.slice(config.prefix.length)));
+                } else if (c.type === 'text' && typeof c.value === 'string' && config.regex.test(c.value)) {
+                    config.regex.lastIndex = 0;
+                    newChildren.push(...expandTextWithPattern(c.value, config));
                 } else {
                     newChildren.push(child);
                 }
@@ -73,3 +78,12 @@ export default function grammaticalTermShorthand() {
         });
     };
 }
+
+export {makeTextSpan};
+export type {MdxNode, ShorthandConfig};
+
+export default createShorthandPlugin({
+    regex: /__GT_(.+?)__/g,
+    prefix: 'GT_',
+    makeSpan: (term) => makeTextSpan('grammatical-term', term),
+});
