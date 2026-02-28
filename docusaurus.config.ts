@@ -57,6 +57,15 @@ const config: Config = {
     },
   ],
 
+  themes: [
+    ['@easyops-cn/docusaurus-search-local', {
+      hashed: true,
+      language: ['ru', 'en'],
+      indexBlog: false,
+      removeDefaultStopWordFilter: true,
+    }],
+  ],
+
   presets: [
     [
       'classic',
