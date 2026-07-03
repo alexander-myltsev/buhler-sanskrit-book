@@ -48,33 +48,54 @@
   background-color: rgba(40, 40, 50, 0.5);
 }
 
-/* Latin text styling */
+/*
+ * Highlighted-word palette (issue #4).
+ * Four distinct roles, each with its own hue; all colors meet WCAG AA
+ * (contrast >= 4.5:1) against the page background in both themes:
+ *
+ *   role                        light    dark     example
+ *   Sanskrit words (IAST)       #2e5090  #88b4ff  vadāmi, deva
+ *   Latin grammar terms         #1a7f37  #7ee787  Indicativus, Accusativus
+ *   Sanskrit grammar terms      #6f42c1  #d2a8ff  parasmaipada, saṃdhi
+ *   word elements (roots,       #953800  #ffa657  vad-, -a-, -mi
+ *   stems, endings)
+ */
+:root {
+  --sanskrit-word-color: #2e5090;
+  --grammatical-term-color: #1a7f37;
+  --grammatical-term-sanskrit-color: #6f42c1;
+  --word-element-color: #953800;
+}
+
+[data-theme='dark'] {
+  --sanskrit-word-color: #88b4ff;
+  --grammatical-term-color: #7ee787;
+  --grammatical-term-sanskrit-color: #d2a8ff;
+  --word-element-color: #ffa657;
+}
+
+/* Latin text styling — Sanskrit words in IAST transliteration */
 .latin-text {
   font-style: italic;
-  color: #2e5090;
+  color: var(--sanskrit-word-color);
   font-weight: 500;
 }
 
-[data-theme='dark'] .latin-text {
-  color: #88b4ff;
-}
-
-/* Grammatical term styling */
+/* Grammatical term styling — Latin terminology */
 .grammatical-term {
-  color: #29d855;
+  color: var(--grammatical-term-color);
   font-weight: 500;
 }
 
-[data-theme='dark'] .grammatical-term {
-  color: #f9e718;
-}
-
-/* Sanskrit grammatical term styling */
+/* Sanskrit grammatical term styling — parasmaipada, saṃdhi, guṇa, ... */
 .grammatical-term-sanskrit {
-  color: #2e5090;
+  color: var(--grammatical-term-sanskrit-color);
   font-weight: 500;
 }
 
-[data-theme='dark'] .grammatical-term-sanskrit {
-  color: #88b4ff;
+/* Word elements — roots, stems, affixes and endings under discussion */
+.word-element {
+  font-style: italic;
+  color: var(--word-element-color);
+  font-weight: 500;
 }
