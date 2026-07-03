@@ -21,7 +21,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            Начать с введения →
           </Link>
         </div>
       </div>
@@ -33,8 +33,8 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={siteConfig.title}
+      description="Электронное издание упражнений из элементарного курса санскрита Г. Бюлера (Стокгольм, 1923) — санскритско-русские и русско-санскритские упражнения с разметкой, транслитерацией и словарём.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
