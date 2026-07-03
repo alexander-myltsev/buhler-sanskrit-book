@@ -23,7 +23,18 @@ const SanscriptComponent: React.FC<SanscriptProps> = ({
                                                       }) => {
     const content = text || children || '';
     const converted = Sanscript.t(content, from, to);
-    return <div className="sanscript-text" style={{fontSize: '1.2em', display: 'block', marginBottom: '1em'}}>{converted}</div>;
+    // Devanagari first, IAST after (issue #3) — sentence-level, so the
+    // transliteration helps beginners without duplicating inline tokens
+    // daṇḍas come out as '|' in the sanscript IAST scheme; render them as periods
+    const iast = to === 'devanagari'
+        ? Sanscript.t(content, from, 'iast').replace(/\|/g, '.')
+        : null;
+    return (
+        <div className="sanscript-text" style={{fontSize: '1.2em', display: 'block', marginBottom: '1em'}}>
+            {converted}
+            {iast && <span className="sanscript-iast">{iast}</span>}
+        </div>
+    );
 };
 
 export default SanscriptComponent;

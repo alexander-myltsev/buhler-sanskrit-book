@@ -48,6 +48,17 @@
   background-color: rgba(40, 40, 50, 0.5);
 }
 
+/* IAST transliteration under a Devanagari sentence block (issue #3) */
+.sanscript-iast {
+  display: block;
+  font-size: 0.75em;
+  line-height: 1.5;
+  font-style: italic;
+  font-family: var(--ifm-font-family-base);
+  color: var(--ifm-color-emphasis-600);
+  margin-top: 0.15em;
+}
+
 /* Latin text styling */
 .latin-text {
   font-style: italic;
