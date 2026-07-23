@@ -54,6 +54,7 @@ Numbered translation sentences...
 Rules:
 
 - The title is a setext heading `УРОК N` with the lesson number in Roman numerals (`УРОК VI`).
+- Import only the components the page actually uses (e.g. drop the `Latin` import when the lesson has no genuinely Latin material).
 - The four top-level sections are always `## Грамматика`, `## Словарь`, `## Чтение`, `## Упражнения`, in that order.
 - The grammar block opens with `## Грамматика`, followed by one numbered `### 1. ...`, `### 2. ...` subheading per topic. Never use bold text, `<u>...</u>` underlining, or escaped numbered paragraphs (`1\.`, `2\.`) as pseudo-headings — they get no anchor and are invisible to the TOC.
 - Vocabulary goes under `## Словарь`, with one `### ...` subheading per part of speech (`### Глаголы`, `### Существительные`, `### Прилагательные`, `### Наречия`…).
@@ -85,6 +86,8 @@ Renders Devanagari with a custom explanation instead of auto-generated IAST. Use
 ```mdx
 __S_devaH=dev-aḥ__
 ```
+
+Use the `=explanation` form only when it adds something over the auto-generated IAST (a morphological breakdown, a `(s)`/`(su)` marker, a translation). If the explanation would just repeat the IAST, use plain `__S_...__`: `__S_A__`, not `__S_A=ā__`.
 
 ### `__GT_term__` — Latin Grammatical Term
 
@@ -137,10 +140,10 @@ Never use it for Sanskrit words. Roman numerals (verb classes, lesson numbers) a
 
 ### Sandhi Transformations
 
-Show sandhi rules with `>` and shorthand:
+Show sandhi rules with `=` between the unmerged and merged forms, in shorthand:
 
 ```mdx
-__S_nfpaH__ __S_atra__ > __S_nfpo__ '__S_tra__
+__S_nfpaH__ __S_atra__ = __S_nfpo__ '__S_tra__
 ```
 
 ---
