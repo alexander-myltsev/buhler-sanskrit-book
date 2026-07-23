@@ -23,23 +23,24 @@ id	word	gender	translation	lesson	tag
 22	lANgala	n	плуг	3	n
 23	kzetra	n	поле	3	n
 24	viza	n	яд	3	n
-25	jana	m	человек, люди	4
-26	vfkza	m	дерево	4
-27	Siva	m	имя бога	4
-28	rAma	m	имя героя	4
-29	Sara	m	стрела	4
-30	pApa	n	грех, зло	4
-31	duHKa	n	несчастье, горе	4
-32	satya	n	правда, истина	4
-33	agni	m	огонь	4
-34	ari	m	враг	4
-35	fzi	m	пророк, мудрец	4
-36	kavi	m	поэт	4
-37	asi	m	меч	4
-38	pARi	m	рука	4
-39	giri	m	гора	4
-40	hari	m	имя бога	4
-41	vAri	n	вода	4
+25	jana	m	человек, люди	4	-a,m
+26	vfkza	m	дерево	4	-a,m
+27	Siva	m	имя бога	4	-a,m
+28	rAma	m	имя героя	4	-a,m
+29	Sara	m	стрела	4	-a,m
+30	pApa	n	грех, зло	4	-a,n
+31	duHKa	n	несчастье, горе	4	-a,n
+32	satya	n	правда, истина	4	-a,n
+324	viza	n	яд	4	-a,n
+33	agni	m	огонь	4	-i,m
+34	ari	m	враг	4	-i,m
+35	fzi	m	пророк, мудрец	4	-i,m
+36	kavi	m	поэт	4	-i,m
+37	asi	m	меч	4	-i,m
+38	pARi	m	рука	4	-i,m
+39	giri	m	гора	4	-i,m
+40	hari	m	имя бога	4	-i,m
+41	vAri	n	вода	4	-i,n
 42	BAnu	m	солнце	5
 43	Satru	m	враг	5
 44	bAhu	m	рука	5

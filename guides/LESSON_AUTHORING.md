@@ -166,7 +166,7 @@ Conventions inside `rst-table` cells:
 - Cells support the full MDX shorthand: `__S_...__`, `__S_...=breakdown__`, `__GT_...__`, `__GTS_...__`.
 - Merge identical adjacent forms with grid spans (omit the `+---+` border / `|` separator) instead of repeating the form.
 - Case labels go in the first column as `__GT_N.__`, `__GT_Acc.__`, `__GT_I.__`, `__GT_D.__`, `__GT_Abl.__`, `__GT_G.__`, `__GT_L.__`, `__GT_V.__`. If a header cell contains a word like «падеж», wrap it in `__GT_` shorthand too.
-- Sandhi-affected forms are marked with `(s)` **inside** the shorthand's explanation part: `__S_maDuBiH=madhu-bhiḥ (s)__`, not `__S_maDuBiH=madhu-bhiḥ__ (s)`.
+- Sandhi-affected forms are marked with `(s)` **inside** the shorthand's explanation part: `__S_maDuBiH=madhu-bhiḥ (s)__`, not `__S_maDuBiH=madhu-bhiḥ__ (s)`. The Loc. pl. ending marker `(su)` follows the same rule: `__S_devezu=dev-e-ṣu (su)__`, not `__S_devezu=dev-e-ṣu__ (__S_su__)`.
 - After editing a table, realign the grid with `npm run align` (runs `scripts/align-rst-tables.mjs`).
 
 ---
