@@ -127,7 +127,10 @@ All Sanskrit words, roots, stems, and forms in grammar prose use `__S_` shorthan
 Корни __S_kzip__-__S_kzipa__, __S_tud__-__S_tuda__
 ```
 
-Single phonemes under discussion (i, u, ṛ, ś, ṣ...) may stay as plain IAST characters in the Russian text; use shorthand as soon as it is a word or morpheme.
+Single phonemes under discussion also use `__S_` shorthand, so they render in Devanagari (a trailing consonant gets a virama: `__S_n__` → न् (n)):
+
+- Simple phonemes — plain form: `__S_i__`, `__S_u__`, `__S_n__`, `__S_S__` (ś), `__S_z__` (ṣ), `__S_Y__` (ñ), `__S_R__` (ṇ), `__S_q__` (ḍ), `__S_w__` (ṭ).
+- Aspirates and other phonemes whose IAST is a digraph — use the `=explanation` form so the reader sees the familiar IAST: `__S_J=jh__`, `__S_Q=ḍh__`, `__S_W=ṭh__`, `__S_T=th__`, `__S_C=ch__`.
 
 ### `<Latin />` — Actual Latin Only
 
@@ -137,6 +140,17 @@ The `<Latin />` component is reserved for genuinely Latin material:
 - Latin grammatical terminology not in shorthand: `<Latin text="commodi"/>`, `<Latin text="partitivus"/>`
 
 Never use it for Sanskrit words. Roman numerals (verb classes, lesson numbers) are plain text — `УРОК I`, `### Глаголы I класса` — they are numerals, not Latin words, and JSX inside a heading gets stripped from its anchor slug.
+
+### Footnotes
+
+Mark the annotated spot with an escaped asterisk (`\*`) directly after the word or example it qualifies, and put the note text — a paragraph starting with `\*` — immediately after the paragraph that carries the marker (not at the bottom of the section):
+
+```mdx
+а) Корни IV кл. на __S_iv__ удлиняют гласный\* перед признаком этого класса...
+
+\* Корневые __S_i__ и __S_u__, за которыми следует группа согласных, начинающаяся с __S_r__
+или __S_v__, удлиняются.
+```
 
 ### Sandhi Transformations
 
@@ -276,7 +290,7 @@ Russian sentences for translation into Sanskrit, one per paragraph. Word-order n
 - [ ] Frontmatter has `sidebar_position: N`; title is setext `УРОК N` (Roman numeral)
 - [ ] Sections are `## Грамматика` / `## Словарь` / `## Чтение` / `## Упражнения`, in that order
 - [ ] Grammar topics are numbered `### 1. ...` subheadings under `## Грамматика` (local TOC works)
-- [ ] All Sanskrit in prose uses `__S_slp1__` / `__S_slp1=breakdown__` shorthand
+- [ ] All Sanskrit in prose uses `__S_slp1__` / `__S_slp1=breakdown__` shorthand, including single phonemes (`__S_n__`; aspirates as `__S_J=jh__`)
 - [ ] All grammatical terms use `__GT_` (Latin) / `__GTS_` (Sanskrit, canonical spellings — `saMDi`)
 - [ ] Paradigms are ` ```rst-table ` blocks; `(s)` markers inside the shorthand; grid realigned with `npm run align`
 - [ ] `<Latin />` used only for actual Latin (gender markers, terminology); Roman numerals are plain text
@@ -284,6 +298,6 @@ Russian sentences for translation into Sanskrit, one per paragraph. Word-order n
 - [ ] Reading blocks under `## Чтение`; `<Sanscript>` text is clean SLP1, no `from` attribute
 - [ ] Daṇḍas are `.` / `..`, never `|`; avagraha is `'`
 - [ ] Exercises numbered with word-order hints; grammatical hints in `__GT_`/`__S_` shorthand
-- [ ] Footnotes use `\*` markers with the note text at the bottom of the relevant section
+- [ ] Footnotes use `\*` markers with the note paragraph immediately after the paragraph that carries the marker
 - [ ] SLP1 is clean: `npm run validate:slp1` reports no IAST leftovers
 - [ ] Build passes: `npm run build`
