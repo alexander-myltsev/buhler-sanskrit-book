@@ -6,6 +6,8 @@ This document is the standard for composing a new lesson page. It defines the fi
 
 A lesson is an MDX file in `docs/` written in Russian with Sanskrit examples. Sanskrit is encoded in **SLP1** using concise shorthand notation (never raw `<Latin>` components), paradigm tables are **RST grid tables**, and every section is a real `##` heading so the page gets a local per-page TOC.
 
+**Source fidelity:** this guide governs markup and encoding only. Bühler's own text is preserved as-is — his wording, topic numbering, notation (`>` vs `=`, printed signs like `:=` for the visarga), and abbreviation style (e.g. `__GT_Dat.__` vs `__GT_D.__` in prose) are never "normalized". Convert the encoding, keep the text.
+
 ---
 
 ## File Structure
@@ -56,7 +58,7 @@ Rules:
 - The title is a setext heading `УРОК N` with the lesson number in Roman numerals (`УРОК VI`).
 - Import only the components the page actually uses (e.g. drop the `Latin` import when the lesson has no genuinely Latin material).
 - The four top-level sections are always `## Грамматика`, `## Словарь`, `## Чтение`, `## Упражнения`, in that order.
-- The grammar block opens with `## Грамматика`, followed by one numbered `### 1. ...`, `### 2. ...` subheading per topic. Never use bold text, `<u>...</u>` underlining, or escaped numbered paragraphs (`1\.`, `2\.`) as pseudo-headings — they get no anchor and are invisible to the TOC.
+- The grammar block opens with `## Грамматика`, followed by one `### 1. ...`, `### 2. ...` subheading per topic, keeping the book's own topic numbers — never renumber. A preamble topic the book gives no number stays an unnumbered `###` before `### 1. ...` (e.g. `### Таблица подъема гласных`). Never use bold text, `<u>...</u>` underlining, or escaped numbered paragraphs (`1\.`, `2\.`) as pseudo-headings — they get no anchor and are invisible to the TOC.
 - Vocabulary goes under `## Словарь`, with one `### ...` subheading per part of speech (`### Глаголы`, `### Существительные`, `### Прилагательные`, `### Наречия`…).
 - Reading sentences go under a `## Чтение` heading — never directly after the dictionaries.
 - Each `<Sanscript>` reading block holds one line of connected sentences; use several consecutive blocks for a longer passage.
@@ -132,6 +134,8 @@ Single phonemes under discussion also use `__S_` shorthand, so they render in De
 - Simple phonemes — plain form: `__S_i__`, `__S_u__`, `__S_n__`, `__S_S__` (ś), `__S_z__` (ṣ), `__S_Y__` (ñ), `__S_R__` (ṇ), `__S_q__` (ḍ), `__S_w__` (ṭ).
 - Aspirates and other phonemes whose IAST is a digraph — use the `=explanation` form so the reader sees the familiar IAST: `__S_J=jh__`, `__S_Q=ḍh__`, `__S_W=ṭh__`, `__S_T=th__`, `__S_C=ch__`.
 
+This applies inside headings too — `### 2. Существительные ср. р. на __S_u__`, not `... на u`. The shorthand is plain text at the Markdown level (unlike JSX), so the heading's anchor slug survives.
+
 ### `<Latin />` — Actual Latin Only
 
 The `<Latin />` component is reserved for genuinely Latin material:
@@ -152,13 +156,24 @@ Mark the annotated spot with an escaped asterisk (`\*`) directly after the word 
 или __S_v__, удлиняются.
 ```
 
+In a reading passage the marker goes **inside** the `<Sanscript>` text, directly after the word it annotates (the `*` passes through as a literal asterisk), and the `\*` note paragraph follows that block:
+
+```mdx
+<Sanscript text="sadA devAn smaranti. gfhaM* gacCAmaH." />
+
+\* Конечный __S_m__ обыкновенно перед начальными согласными превращается в __GTS_anusvAra__ ...
+```
+
 ### Sandhi Transformations
 
-Show sandhi rules with `=` between the unmerged and merged forms, in shorthand:
+Show sandhi rules in shorthand, with the operator the book uses — `=` between the unmerged and merged spellings, `>` where the book shows a combination yielding a form:
 
 ```mdx
 __S_nfpaH__ __S_atra__ = __S_nfpo__ '__S_tra__
+__S_agni__ + __S_su__ > __S_agnizu__
 ```
+
+Keep the original's choice per example — don't normalize `>` to `=` or vice versa.
 
 ---
 
@@ -193,7 +208,7 @@ Conventions inside `rst-table` cells:
 - Text is **SLP1 only**. SLP1 is the component's default source script — do not pass `from="slp1"` explicitly.
 - Daṇḍas: use `.` for । and `..` for ॥. Never use `|` — in SLP1 it is not a daṇḍa and renders as a garbage retroflex ligature (ळ्ह्).
 - Avagraha: use `'` (apostrophe), e.g. `nfpo 'tra`.
-- No IAST, mixed-case leftovers, or stray annotations inside the `text` attribute.
+- No IAST, mixed-case leftovers, or stray annotations inside the `text` attribute. The one exception is a footnote `*` marker directly after a word (see Footnotes).
 - Run `npm run validate:slp1` (`scripts/validate-slp1.mjs`) to catch IAST leftovers: it flags IAST digraphs (`bh`, `gh`, `dh`, `kh`, `ph`, `ch`, `th`, `Bh`…), IAST diphthongs (`ai`, `au` — in SLP1 these are `E`, `O`), and diacritic characters (ā, ṛ, ḥ…) in `<Sanscript text>` attributes and in the SLP1 part (before `=`) of `__S_`/`__GTS_` shorthands.
 
 ---
@@ -289,7 +304,7 @@ Russian sentences for translation into Sanskrit, one per paragraph. Word-order n
 
 - [ ] Frontmatter has `sidebar_position: N`; title is setext `УРОК N` (Roman numeral)
 - [ ] Sections are `## Грамматика` / `## Словарь` / `## Чтение` / `## Упражнения`, in that order
-- [ ] Grammar topics are numbered `### 1. ...` subheadings under `## Грамматика` (local TOC works)
+- [ ] Grammar topics are `### 1. ...` subheadings under `## Грамматика` with the book's own numbers (unnumbered `###` preamble allowed; local TOC works)
 - [ ] All Sanskrit in prose uses `__S_slp1__` / `__S_slp1=breakdown__` shorthand, including single phonemes (`__S_n__`; aspirates as `__S_J=jh__`)
 - [ ] All grammatical terms use `__GT_` (Latin) / `__GTS_` (Sanskrit, canonical spellings — `saMDi`)
 - [ ] Paradigms are ` ```rst-table ` blocks; `(s)` markers inside the shorthand; grid realigned with `npm run align`
@@ -299,5 +314,6 @@ Russian sentences for translation into Sanskrit, one per paragraph. Word-order n
 - [ ] Daṇḍas are `.` / `..`, never `|`; avagraha is `'`
 - [ ] Exercises numbered with word-order hints; grammatical hints in `__GT_`/`__S_` shorthand
 - [ ] Footnotes use `\*` markers with the note paragraph immediately after the paragraph that carries the marker
+- [ ] Bühler's text preserved: wording, topic numbers, `>`/`=` notation, abbreviation style unchanged — only encoding converted
 - [ ] SLP1 is clean: `npm run validate:slp1` reports no IAST leftovers
 - [ ] Build passes: `npm run build`
