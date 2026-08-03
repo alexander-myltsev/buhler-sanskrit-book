@@ -164,7 +164,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Электронная версия упражнений © Н. П. Лихушина, 2008. Построено на Docusaurus.`,
+      copyright: `Текст: Г. Бюлер (Стокгольм, 1923) · электронная версия © Н. П. Лихушина, 2008 · ред. Марцис Гасюнс · <a href="https://creativecommons.org/licenses/by/4.0/deed.ru" target="_blank" rel="license noopener noreferrer">CC BY 4.0</a>. Построено на Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
