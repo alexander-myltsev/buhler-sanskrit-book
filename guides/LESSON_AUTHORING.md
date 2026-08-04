@@ -134,7 +134,7 @@ Single phonemes under discussion also use `__S_` shorthand, so they render in De
 - Simple phonemes — plain form: `__S_i__`, `__S_u__`, `__S_n__`, `__S_S__` (ś), `__S_z__` (ṣ), `__S_Y__` (ñ), `__S_R__` (ṇ), `__S_q__` (ḍ), `__S_w__` (ṭ).
 - Aspirates and other phonemes whose IAST is a digraph — use the `=explanation` form so the reader sees the familiar IAST: `__S_J=jh__`, `__S_Q=ḍh__`, `__S_W=ṭh__`, `__S_T=th__`, `__S_C=ch__`.
 
-This applies inside headings too — `### 2. Существительные ср. р. на __S_u__`, not `... на u`. The shorthand is plain text at the Markdown level (unlike JSX), so the heading's anchor slug survives.
+This applies inside headings too — `### 2. Существительные ср. р. на __S_u__`, not `... на u`. Unlike JSX, the shorthand is plain text at the Markdown level, so it survives into the heading and its local-TOC entry — but such a heading also needs an explicit anchor (see **Heading Anchors** below).
 
 ### `<Latin />` — Actual Latin Only
 
@@ -174,6 +174,31 @@ __S_agni__ + __S_su__ > __S_agnizu__
 ```
 
 Keep the original's choice per example — don't normalize `>` to `=` or vice versa.
+
+---
+
+## Heading Anchors
+
+The shorthand plugins are registered as `beforeDefaultRemarkPlugins` in `docusaurus.config.ts`, so shorthand in a heading is already expanded when Docusaurus builds the local TOC — the TOC shows संधि saṃdhi, not a raw `GTS_saMDi`. The same expansion feeds the anchor slug, which would otherwise pick up Devanagari and diacritics (`#3-правила-संधिsaṃdhi`).
+
+So **every heading containing `__S_`, `__GT_`, or `__GTS_` shorthand carries an explicit anchor**, appended as `{#...}`:
+
+```mdx
+### 3. Правила __GTS_saMDi__ {#3-правила-samdhi}
+### 1. Существительные жен. р. на __S_A__ {#1-существительные-жен-р-на-a}
+### 4. Удвоение начального __S_C=ch__ {#4-удвоение-начального-ch}
+### 1. __GT_Indic.__ __GT_Praes.__ __GTS_Atmanepada__ (__GT_Medium__) {#1-indic-praes-atmanepada-medium}
+```
+
+Slug convention — the shape Docusaurus would generate itself, with the Sanskrit spelled out in bare ASCII:
+
+- Lowercase; spaces → `-`; drop `.`, `,`, parentheses and other punctuation. Keep the book's topic number as the first segment (`### 3. Правила …` → `3-правила-…`).
+- Russian words stay Cyrillic, matching the auto-generated anchors of shorthand-free headings (`#грамматика`, `#словарь`, `#чтение`).
+- `__S_`/`__GTS_` shorthand becomes its IAST with diacritics stripped: `__GTS_saMDi__` → `samdhi`, `__GTS_Atmanepada__` → `atmanepada`, `__GTS_parasmEpada__` → `parasmaipada`, `__S_A__` → `a`, `__S_E__` → `ai`, `__S_C=ch__` → `ch`.
+- `__GT_` terms are already Latin — lowercase them and drop the periods: `__GT_Indicativus praesens__` → `indicativus-praesens`, `__GT_Indic.__ __GT_Praes.__` → `indic-praes`.
+- Anchors must be unique within a page. Distinct phonemes can collapse onto the same letter (`__S_a__` and `__S_A__` both give `a`), so keep the surrounding words and the topic number in the slug to separate them.
+
+Headings without shorthand need no `{#...}` — their auto-generated slug is already clean. Never put JSX in a heading: it is stripped from the slug and serialises badly into the TOC.
 
 ---
 
@@ -307,6 +332,7 @@ Russian sentences for translation into Sanskrit, one per paragraph. Word-order n
 - [ ] Grammar topics are `### 1. ...` subheadings under `## Грамматика` with the book's own numbers (unnumbered `###` preamble allowed; local TOC works)
 - [ ] All Sanskrit in prose uses `__S_slp1__` / `__S_slp1=breakdown__` shorthand, including single phonemes (`__S_n__`; aspirates as `__S_J=jh__`)
 - [ ] All grammatical terms use `__GT_` (Latin) / `__GTS_` (Sanskrit, canonical spellings — `saMDi`)
+- [ ] Every heading containing shorthand has an explicit `{#...}` anchor (Cyrillic words kept, Sanskrit as bare ASCII IAST — `{#3-правила-samdhi}`), unique within the page
 - [ ] Paradigms are ` ```rst-table ` blocks; `(s)` markers inside the shorthand; grid realigned with `npm run align`
 - [ ] `<Latin />` used only for actual Latin (gender markers, terminology); Roman numerals are plain text
 - [ ] Vocabulary added to the `src/dictionary/` TSVs and rendered via `<Dictionary lesson="N" />` under `## Словарь` with `### ` per part of speech

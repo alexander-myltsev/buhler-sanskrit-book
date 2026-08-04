@@ -82,7 +82,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          remarkPlugins: [
+          beforeDefaultRemarkPlugins: [
             remarkRstTable,
             grammaticalTermShorthand,
             grammaticalTermSanskritShorthand,
