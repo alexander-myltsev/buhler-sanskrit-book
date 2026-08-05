@@ -21,11 +21,12 @@
 
 ## Охват
 
-Оцифровано **20 из 48 уроков** —
+Оцифрованы **все 48 из 48 уроков** —
 [`docs/lesson1.mdx`](https://github.com/alexander-myltsev/buhler-sanskrit-book/blob/main/docs/lesson1.mdx) …
-[`docs/lesson20.mdx`](https://github.com/alexander-myltsev/buhler-sanskrit-book/blob/main/docs/lesson20.mdx)
+[`docs/lesson48.mdx`](https://github.com/alexander-myltsev/buhler-sanskrit-book/blob/main/docs/lesson48.mdx)
 плюс [`docs/intro.mdx`](https://github.com/alexander-myltsev/buhler-sanskrit-book/blob/main/docs/intro.mdx).
-Уроки 21–48 пока не оцифрованы.
+Уроки 43–47 содержат только упражнения «русский → санскрит» (без деванагари),
+согласно предисловию; урок 48 (производные основы) завершается без упражнения.
 
 Словарь к упражнениям — четыре TSV-файла (глаголы / существительные / прилагательные /
 прочее) в [`src/dictionary/`](https://github.com/alexander-myltsev/buhler-sanskrit-book/tree/main/src/dictionary),
