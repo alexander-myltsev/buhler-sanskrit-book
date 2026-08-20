@@ -89,7 +89,7 @@ Renders Devanagari with a custom explanation instead of auto-generated IAST. Use
 __S_devaH=dev-aḥ__
 ```
 
-Use the `=explanation` form only when it adds something over the auto-generated IAST (a morphological breakdown, a `(s)`/`(su)` marker, a translation). If the explanation would just repeat the IAST, use plain `__S_...__`: `__S_A__`, not `__S_A=ā__`.
+Use the `=explanation` form only when it adds something over the auto-generated IAST (a morphological breakdown, a `(s)`/`(su)` marker, a translation). If the explanation would just repeat the IAST, use plain `__S_...__`: `__S_A__`, not `__S_A=ā__`; `__S_C__`, not `__S_C=ch__`.
 
 ### `__GT_term__` — Latin Grammatical Term
 
@@ -131,8 +131,7 @@ All Sanskrit words, roots, stems, and forms in grammar prose use `__S_` shorthan
 
 Single phonemes under discussion also use `__S_` shorthand, so they render in Devanagari (a trailing consonant gets a virama: `__S_n__` → न् (n)):
 
-- Simple phonemes — plain form: `__S_i__`, `__S_u__`, `__S_n__`, `__S_S__` (ś), `__S_z__` (ṣ), `__S_Y__` (ñ), `__S_R__` (ṇ), `__S_q__` (ḍ), `__S_w__` (ṭ).
-- Aspirates and other phonemes whose IAST is a digraph — use the `=explanation` form so the reader sees the familiar IAST: `__S_J=jh__`, `__S_Q=ḍh__`, `__S_W=ṭh__`, `__S_T=th__`, `__S_C=ch__`.
+Always the plain form — the auto-generated IAST already spells the phoneme the familiar way, digraphs included: `__S_i__`, `__S_u__`, `__S_n__`, `__S_S__` (ś), `__S_z__` (ṣ), `__S_Y__` (ñ), `__S_R__` (ṇ), `__S_q__` (ḍ), `__S_w__` (ṭ), and equally `__S_J__` (jh), `__S_Q__` (ḍh), `__S_W__` (ṭh), `__S_T__` (th), `__S_C__` (ch). Never write the IAST out after `=` — `__S_C=ch__` renders exactly what `__S_C__` renders.
 
 This applies inside headings too — `### 2. Существительные ср. р. на __S_u__`, not `... на u`. Unlike JSX, the shorthand is plain text at the Markdown level, so it survives into the heading and its local-TOC entry — but such a heading also needs an explicit anchor (see **Heading Anchors** below).
 
@@ -186,7 +185,7 @@ So **every heading containing `__S_`, `__GT_`, or `__GTS_` shorthand carries an 
 ```mdx
 ### 3. Правила __GTS_saMDi__ {#3-правила-samdhi}
 ### 1. Существительные жен. р. на __S_A__ {#1-существительные-жен-р-на-a}
-### 4. Удвоение начального __S_C=ch__ {#4-удвоение-начального-ch}
+### 4. Удвоение начального __S_C__ {#4-удвоение-начального-ch}
 ### 1. __GT_Indic.__ __GT_Praes.__ __GTS_Atmanepada__ (__GT_Medium__) {#1-indic-praes-atmanepada-medium}
 ```
 
@@ -194,7 +193,7 @@ Slug convention — the shape Docusaurus would generate itself, with the Sanskri
 
 - Lowercase; spaces → `-`; drop `.`, `,`, parentheses and other punctuation. Keep the book's topic number as the first segment (`### 3. Правила …` → `3-правила-…`).
 - Russian words stay Cyrillic, matching the auto-generated anchors of shorthand-free headings (`#грамматика`, `#словарь`, `#чтение`).
-- `__S_`/`__GTS_` shorthand becomes its IAST with diacritics stripped: `__GTS_saMDi__` → `samdhi`, `__GTS_Atmanepada__` → `atmanepada`, `__GTS_parasmEpada__` → `parasmaipada`, `__S_A__` → `a`, `__S_E__` → `ai`, `__S_C=ch__` → `ch`.
+- `__S_`/`__GTS_` shorthand becomes its IAST with diacritics stripped: `__GTS_saMDi__` → `samdhi`, `__GTS_Atmanepada__` → `atmanepada`, `__GTS_parasmEpada__` → `parasmaipada`, `__S_A__` → `a`, `__S_E__` → `ai`, `__S_C__` → `ch`.
 - `__GT_` terms are already Latin — lowercase them and drop the periods: `__GT_Indicativus praesens__` → `indicativus-praesens`, `__GT_Indic.__ __GT_Praes.__` → `indic-praes`.
 - Anchors must be unique within a page. Distinct phonemes can collapse onto the same letter (`__S_a__` and `__S_A__` both give `a`), so keep the surrounding words and the topic number in the slug to separate them.
 
@@ -330,7 +329,7 @@ Russian sentences for translation into Sanskrit, one per paragraph. Word-order n
 - [ ] Frontmatter has `sidebar_position: N`; title is setext `УРОК N` (Roman numeral)
 - [ ] Sections are `## Грамматика` / `## Словарь` / `## Чтение` / `## Упражнения`, in that order
 - [ ] Grammar topics are `### 1. ...` subheadings under `## Грамматика` with the book's own numbers (unnumbered `###` preamble allowed; local TOC works)
-- [ ] All Sanskrit in prose uses `__S_slp1__` / `__S_slp1=breakdown__` shorthand, including single phonemes (`__S_n__`; aspirates as `__S_J=jh__`)
+- [ ] All Sanskrit in prose uses `__S_slp1__` / `__S_slp1=breakdown__` shorthand, including single phonemes (`__S_n__`, `__S_J__`); `=` only where it adds a breakdown, `(s)` marker or translation — never a copy of the auto IAST
 - [ ] All grammatical terms use `__GT_` (Latin) / `__GTS_` (Sanskrit, canonical spellings — `saMDi`)
 - [ ] Every heading containing shorthand has an explicit `{#...}` anchor (Cyrillic words kept, Sanskrit as bare ASCII IAST — `{#3-правила-samdhi}`), unique within the page
 - [ ] Paradigms are ` ```rst-table ` blocks; `(s)` markers inside the shorthand; grid realigned with `npm run align`
