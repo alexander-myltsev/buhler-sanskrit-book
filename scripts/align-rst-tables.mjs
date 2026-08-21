@@ -60,6 +60,28 @@ function serialize({ header, bodyRows }) {
   return lines.join('\n');
 }
 
+// This aligner models only single-row headers and vertical merges. A grid with a
+// multi-row header or a horizontal merge (colspan) cannot be represented by
+// modelFromGrid, and rewriting it would silently drop cells — so such grids are
+// left untouched. `remarkRstTable` renders them fine; keep them hand-aligned.
+function isLossless(gridText) {
+  const lines = gridText.split('\n');
+  const content = lines.filter((l) => l.trimStart().startsWith('|'));
+  if (content.length === 0) return false;
+  const sepIdx = lines.findIndex(
+    (l) => l.includes('=') && l.trimStart().startsWith('+'),
+  );
+  if (sepIdx !== -1) {
+    const headerLines = lines
+      .slice(0, sepIdx)
+      .filter((l) => l.trimStart().startsWith('|'));
+    if (headerLines.length > 1) return false; // multi-row header
+  }
+  const width = (l) => l.split('|').length;
+  const w0 = width(content[0]);
+  return content.every((l) => width(l) === w0); // any narrower row means a colspan
+}
+
 const splitRow = (line) =>
   line
     .split('|')
@@ -103,10 +125,20 @@ for (const name of fs.readdirSync(DOCS_DIR).sort()) {
   const file = path.join(DOCS_DIR, name);
   const src = fs.readFileSync(file, 'utf8');
   let n = 0;
+  let skipped = 0;
   const out = src.replace(/```rst-table\n([\s\S]*?)```/g, (_full, grid) => {
+    if (!isLossless(grid)) {
+      skipped++;
+      return _full;
+    }
     n++;
     return '```rst-table\n' + serialize(modelFromGrid(grid)) + '\n```';
   });
+  if (skipped)
+    console.log(
+      `skipped ${skipped} spanning grid${skipped === 1 ? '' : 's'} in ${name}` +
+        ' (multi-row header or colspan — kept as written)',
+    );
   if (out !== src) {
     fs.writeFileSync(file, out);
     filesChanged++;
