@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbuhler_book_docusaurus=self.webpackChunkbuhler_book_docusaurus||[]).push([["666"],{5377(o){o.exports=JSON.parse('{"metadata":{"permalink":"/buhler-sanskrit-book/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":0,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
