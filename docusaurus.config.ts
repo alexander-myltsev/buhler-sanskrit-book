@@ -19,6 +19,16 @@ const config: Config = {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
+  markdown: {
+    mdx1Compat: {
+      // `v4: true` turns MDX v1 compat off by default, which would drop the
+      // `{#explicit-anchor}` heading syntax. Every lesson heading that carries
+      // shorthand relies on it (see guides/LESSON_AUTHORING.md), so keep it on.
+      // Migrating to the MDX-native `{/* #id */}` form is a separate job.
+      headingIds: true,
+    },
+  },
+
   // Set the production url of your site here
   url: 'https://alexander-myltsev.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
