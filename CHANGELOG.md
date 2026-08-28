@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Fixed
+
+- **H3603 — typecheck true red fixed** (OxAlpha `glm-5.3-flash`, 28-08-2026).
+  `npm run typecheck` exited 2 with three tsc errors (2× TS2307
+  `Cannot find module '@theme/Heading'`, 1× TS2322 `title` on `@theme/Layout`
+  Props). Root cause: only `@docusaurus/module-type-aliases`' reduced `@theme/*`
+  declarations reached the tsc program — `theme-classic.d.ts` (which declares
+  `@theme/Heading` and the full Layout `title`/`description` Props) was never
+  included. Fix: `src/types/theme-classic.d.ts` pulling
+  `/// <reference types="@docusaurus/theme-classic" />` into the program.
+  Verified: `tsc` exit 0, lint_census green, vitest 26/26.
+
 ## [0.1.1] - 2026-08-24
 
 
