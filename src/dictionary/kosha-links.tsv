@@ -1,0 +1,640 @@
+dictionary	headword	card_token	status
+verb	pat	pat	ok
+verb	dah	dah	ok
+verb	yaj	yaj	ok
+verb	SaMs	_53a_4ds	ok
+verb	vas	vas	ok
+verb	rakz	rakz	ok
+verb	jIv	j_49v	ok
+verb	car	car	ok
+verb	nam	nam	ok
+verb	pac	pac	ok
+verb	DAv	_44_41v	ok
+verb	tyaj	tyaj	ok
+verb	vah	vah	ok
+verb	ji	ji	ok
+verb	nI	n_49	ok
+verb	BU	_42_55	ok
+verb	smf	smf	ok
+verb	tF	t_46	ok
+verb	vfz	vfz	ok
+verb	pA	p_41	ok
+verb	sTA	s_54_41	ok
+verb	dfS	df_53	ok
+verb	gam	gam	ok
+verb	yam	yam	ok
+verb	kzip	kzip	ok
+verb	viS	vi_53	ok
+verb	pracC	prac_43	ok
+verb	karz		no_card
+verb	sparS		no_card
+verb	iz	iz	ok
+verb	diS	di_53	ok
+verb	sic	sic	ok
+verb	sarj		no_card
+verb	hvA	hv_41	ok
+verb	sad	sad	ok
+verb	guh	guh	ok
+verb	muc	muc	ok
+verb	kart		no_card
+verb	lip	lip	ok
+verb	lup	lup	ok
+verb	gup	gup	ok
+verb	ruh	ruh	ok
+verb	luB	lu_42	ok
+verb	kruD	kru_44	ok
+verb	Suz	_53uz	ok
+verb	kup	kup	ok
+verb	as	as	ok
+verb	naS	na_53	ok
+verb	snih	snih	ok
+verb	liK	li_4b	ok
+verb	A-gam		prefixed_no_card
+verb	A-ruh		prefixed_no_card
+verb	A-kram		prefixed_no_card
+verb	div	div	ok
+verb	mad	mad	ok
+verb	tuz	tuz	ok
+verb	tam	tam	ok
+verb	Sam	_53am	ok
+verb	Sram	_53ram	ok
+verb	Bram	_42ram	ok
+verb	vyaD	vya_44	ok
+verb	A-cam		prefixed_no_card
+verb	ar		no_card
+verb	har		no_card
+verb	kzal		no_card
+verb	cur		no_card
+verb	tul		no_card
+verb	taq		no_card
+verb	gaR		no_card
+verb	kaT	ka_54	ok
+verb	daRq		no_card
+verb	pIq		no_card
+verb	par		no_card
+verb	pUj		no_card
+verb	A-nI		prefixed_no_card
+verb	Ikz	_49kz	ok
+verb	kamp	kamp	ok
+verb	BAz	_42_41z	ok
+verb	yat	yat	ok
+verb	A-raB		prefixed_no_card
+verb	ruc	ruc	ok
+verb	laB	la_42	ok
+verb	vand	vand	ok
+verb	Sikz	_53ikz	ok
+verb	sah	sah	ok
+verb	sev	sev	ok
+verb	jan	jan	ok
+verb	yuD	yu_44	ok
+verb	mar		no_card
+verb	arT	ar_54	ok
+verb	saM-gam		prefixed_no_card
+verb	parA-ji		prefixed_no_card
+verb	uq-qI		prefixed_no_card
+verb	Bikz	_42ikz	ok
+verb	SuB	_53u_42	ok
+verb	vart		no_card
+verb	pra-pad		prefixed_no_card
+verb	marg		no_card
+verb	ava-gam		prefixed_no_card
+verb	ava-tar		prefixed_no_card
+verb	ava-ruh		prefixed_no_card
+verb	upa-nI		prefixed_no_card
+verb	pari-nI		prefixed_no_card
+verb	kar		no_card
+verb	Kan	_4ban	ok
+verb	gA	g_41	ok
+verb	grah	grah	ok
+verb	daMS	da_4d_53	ok
+verb	dA	d_41	ok
+verb	do		no_card
+verb	DA	_44_41	ok
+verb	De		no_card
+verb	DyA	_44y_41	ok
+verb	DyE		no_card
+verb	par		no_card
+verb	banD	ban_44	ok
+verb	mA	m_41	ok
+verb	vac	vac	ok
+verb	vap	vap	ok
+verb	SAs	_53_41s	ok
+verb	Sru	_53ru	ok
+verb	stu	stu	ok
+verb	svap	svap	ok
+verb	hA	h_41	ok
+verb	A-hvA		prefixed_no_card
+verb	ava-kart		prefixed_no_card
+verb	paW	pa_57	ok
+verb	upa-viS		prefixed_no_card
+verb	pra-viS		prefixed_no_card
+verb	A-har		prefixed_no_card
+verb	kalp		no_card
+verb	upa-diS		prefixed_no_card
+verb	vid	vid	ok
+verb	ati-kram		prefixed_no_card
+verb	aDi-sTA		prefixed_no_card
+verb	ud-jan		prefixed_no_card
+verb	ni-sev		prefixed_no_card
+verb	nis-pad		prefixed_no_card
+verb	api-DA		prefixed_no_card
+verb	pra-jan		prefixed_no_card
+verb	prati-BAz		prefixed_no_card
+verb	prati-siD		prefixed_no_card
+verb	prati-han		prefixed_no_card
+verb	pra-BU		prefixed_no_card
+verb	rac		no_card
+verb	vi-naS		prefixed_no_card
+verb	sam-nah		prefixed_no_card
+verb	aBy-as		prefixed_no_card
+verb	pra-as		prefixed_no_card
+verb	A-diS		prefixed_no_card
+verb	darS		no_card
+verb	ni-vas		prefixed_no_card
+verb	pra-vart		prefixed_no_card
+verb	Suc	_53uc	ok
+verb	ni-sad		prefixed_no_card
+verb	anu-gam		prefixed_no_card
+verb	sam-A-car		prefixed_no_card
+verb	vi-vad		prefixed_no_card
+verb	A-Sri		prefixed_no_card
+verb	man	man	ok
+verb	mud	mud	ok
+verb	prati-Ikz		prefixed_no_card
+verb	aBi-nand		prefixed_no_card
+verb	ram	ram	ok
+verb	vi-ram		prefixed_no_card
+verb	anu-sTA		prefixed_no_card
+verb	aS	a_53	ok
+verb	aDi-i		prefixed_no_card
+verb	kalp		no_card
+verb	A-jYA		prefixed_no_card
+verb	darS		no_card
+verb	pari-DA		prefixed_no_card
+verb	apa-nI		prefixed_no_card
+verb	mar		no_card
+verb	yaj	yaj	ok
+verb	aBi-vad		prefixed_no_card
+verb	vid	vid	ok
+verb	varD		no_card
+verb	sTA	s_54_41	ok
+verb	pra-sTA		prefixed_no_card
+verb	As	_41s	ok
+verb	pA	p_41	ok
+verb	pA	p_41	ok
+verb	prI	pr_49	ok
+verb	BI	_42_49	ok
+verb	vac	vac	ok
+verb	sah	sah	ok
+verb	siD	si_44	ok
+verb	han	han	ok
+verb	hvA	hv_41	ok
+verb	ruh	ruh	ok
+verb	laB	la_42	ok
+noun	deva	deva	ok
+noun	nara	nara	ok
+noun	putra	putra	ok
+noun	gaja	gaja	ok
+noun	grAma	gr_41ma	ok
+noun	nfpa	nfpa	ok
+noun	Pala	_50ala	ok
+noun	gfha	gfha	ok
+noun	nagara	nagara	ok
+noun	jala	jala	ok
+noun	kzIra	kz_49ra	ok
+noun	dAna	d_41na	ok
+noun	meGa	me_47a	ok
+noun	hasta	hasta	ok
+noun	mArga	m_41rga	ok
+noun	kunta	kunta	ok
+noun	kawa	kawa	ok
+noun	bAla	b_41la	ok
+noun	Sara	_53ara	ok
+noun	Dana	_44ana	ok
+noun	suKa	su_4ba	ok
+noun	lANgala	l_41_4egala	ok
+noun	kzetra	kzetra	ok
+noun	viza	viza	ok
+noun	jana	jana	ok
+noun	vfkza	vfkza	ok
+noun	Siva	_53iva	ok
+noun	rAma	r_41ma	ok
+noun	Sara	_53ara	ok
+noun	pApa	p_41pa	ok
+noun	duHKa	du_48_4ba	ok
+noun	satya	satya	ok
+noun	agni	agni	ok
+noun	ari	ari	ok
+noun	fzi	fzi	ok
+noun	kavi	kavi	ok
+noun	asi	asi	ok
+noun	pARi	p_41_52i	ok
+noun	giri	giri	ok
+noun	hari	hari	ok
+noun	vAri	v_41ri	ok
+noun	BAnu	_42_41nu	ok
+noun	Satru	_53atru	ok
+noun	bAhu	b_41hu	ok
+noun	vAyu	v_41yu	ok
+noun	vizRu	viz_52u	ok
+noun	bindu	bindu	ok
+noun	paraSu	para_53u	ok
+noun	guru	guru	ok
+noun	maRi	ma_52i	ok
+noun	udaDi	uda_44i	ok
+noun	pAda	p_41da	ok
+noun	Sizya	_53izya	ok
+noun	anna	anna	ok
+noun	sUkta	s_55kta	ok
+noun	SiKara	_53i_4bara	ok
+noun	aSva	a_53va	ok
+noun	ratna	ratna	ok
+noun	pattra (patra)		no_card
+noun	rASi	r_41_53i	ok
+noun	maDu	ma_44u	ok
+noun	aSru	a_53ru	ok
+noun	vasu	vasu	ok
+noun	mftyu	mftyu	ok
+noun	ali	ali	ok
+noun	nfpati	nfpati	ok
+noun	netra	netra	ok
+noun	muKa	mu_4ba	ok
+noun	fkza	fkza	ok
+noun	akza	akza	ok
+noun	kzatriya	kzatriya	ok
+noun	aDarma	a_44arma	ok
+noun	kopa	kopa	ok
+noun	sUta	s_55ta	ok
+noun	stena	stena	ok
+noun	janaka	janaka	ok
+noun	daRqa	da_52qa	ok
+noun	loka	loka	ok
+noun	rAmAyaRa		no_card
+noun	suvarRa	suvar_52a	ok
+noun	puRya	pu_52ya	ok
+noun	rUpaka	r_55paka	ok
+noun	sADu	s_41_44u	ok
+noun	anarTa	anar_54a	ok
+noun	Darma	_44arma	ok
+noun	udyoga	udyoga	ok
+noun	manuzya	manuzya	ok
+noun	yajYa	yaj_59a	ok
+noun	vinaya	vinaya	ok
+noun	SUdra	_53_55dra	ok
+noun	kalyARa	kaly_41_52a	ok
+noun	hita	hita	ok
+noun	bala	bala	ok
+noun	vana	vana	ok
+noun	SAstra	_53_41stra	ok
+noun	DErya	_44_45rya	ok
+noun	dvija	dvija	ok
+noun	dvijAti	dvij_41ti	ok
+noun	vIci	v_49ci	ok
+noun	taru	taru	ok
+noun	paSu	pa_53u	ok
+noun	kanyA	kany_41	ok
+noun	gaNgA	ga_4eg_41	ok
+noun	CAyA	_43_41y_41	ok
+noun	BAryA	_42_41ry_41	ok
+noun	BAzA	_42_41z_41	ok
+noun	BikzA	_42ikz_41	ok
+noun	yamunA	yamun_41	ok
+noun	raTyA	ra_54y_41	ok
+noun	vidyA	vidy_41	ok
+noun	saNDyA		no_card
+noun	gfhasTa	gfhas_54a	ok
+noun	prayAga	pray_41ga	ok
+noun	vihaga	vihaga	ok
+noun	vyADa	vy_41_44a	ok
+noun	izu	izu	ok
+noun	Baya	_42aya	ok
+noun	raRa	ra_52a	ok
+noun	raRa	ra_52a	ok
+noun	SaraRa	_53ara_52a	ok
+noun	svarga	svarga	ok
+noun	hfdaya	hfdaya	ok
+noun	AjYA	_41j_59_41	ok
+noun	ASA	_41_53_41	ok
+noun	kAzWa	k_41z_57a	ok
+noun	gIta	g_49ta	ok
+noun	Gawa	_47awa	ok
+noun	Gfta	_47fta	ok
+noun	DAnya	_44_41nya	ok
+noun	pASa	p_41_53a	ok
+noun	BAra	_42_41ra	ok
+noun	Bikzu	_42ikzu	ok
+noun	Bftya	_42ftya	ok
+noun	mAlA	m_41l_41	ok
+noun	rAjya	r_41jya	ok
+noun	SiSu	_53i_53u	ok
+noun	sarpa	sarpa	ok
+noun	arTa	ar_54a	ok
+noun	indra	indra	ok
+noun	indrARI	indr_41_52_49	ok
+noun	kAvya	k_41vya	ok
+noun	granTa	gran_54a	ok
+noun	jananI	janan_49	ok
+noun	dAsI	d_41s_49	ok
+noun	devI	dev_49	ok
+noun	nagarI	nagar_49	ok
+noun	nArI	n_41r_49	ok
+noun	patnI	patn_49	ok
+noun	putrI	putr_49	ok
+noun	pustaka	pustaka	ok
+noun	pUra	p_55ra	ok
+noun	pfTivI	pf_54iv_49	ok
+noun	matsya	matsya	ok
+noun	vApI	v_41p_49	ok
+noun	saBA	sa_42_41	ok
+noun	senA	sen_41	ok
+noun	stotra	stotra	ok
+noun	kalaha	kalaha	ok
+noun	kalaha	kalaha	ok
+noun	kIrti	k_49rti	ok
+noun	gopa	gopa	ok
+noun	jAti	j_41ti	ok
+noun	Dfti	_44fti	ok
+noun	pArTiva	p_41r_54iva	ok
+noun	budDi	bud_44i	ok
+noun	Bakti	_42akti	ok
+noun	BAga	_42_41ga	ok
+noun	BUti	_42_55ti	ok
+noun	BUmi	_42_55mi	ok
+noun	makzikA	makzik_41	ok
+noun	mukti	mukti	ok
+noun	yazwi	yazwi	ok
+noun	raSmi	ra_53mi	ok
+noun	rAtri	r_41tri	ok
+noun	vraRa	vra_52a	ok
+noun	vraRa	vra_52a	ok
+noun	SAnti	_53_41nti	ok
+noun	Sruti	_53ruti	ok
+noun	smfti	smfti	ok
+noun	svapna	svapna	ok
+noun	hanu	hanu	ok
+noun	anujYA	anuj_59_41	ok
+noun	ISvara	_49_53vara	ok
+noun	kapota	kapota	ok
+noun	karRa	kar_52a	ok
+noun	kAma	k_41ma	ok
+noun	kAraRa	k_41ra_52a	ok
+noun	kroDa	kro_44a	ok
+noun	jAla	j_41la	ok
+noun	DI	_44_49	ok
+noun	nASa	n_41_53a	ok
+noun	padma	padma	ok
+noun	padma	padma	ok
+noun	puruza	puruza	ok
+noun	mahArAja		no_card
+noun	muni	muni	ok
+noun	meKalA	me_4bal_41	ok
+noun	moha	moha	ok
+noun	raTa	ra_54a	ok
+noun	loBa	lo_42a	ok
+noun	vasati	vasati	ok
+noun	SrI	_53r_49	ok
+noun	samudra	samudra	ok
+noun	sfzwi	sfzwi	ok
+noun	hrI	hr_49	ok
+noun	atiTi	ati_54i	ok
+noun	anfta	anfta	ok
+noun	aByAsa	a_42y_41sa	ok
+noun	AdeSa	_41de_53a	ok
+noun	Asana	_41sana	ok
+noun	juhU	juh_55	ok
+noun	pAWa	p_41_57a	ok
+noun	prajA	praj_41	ok
+noun	BU	_42_55	ok
+noun	BUzaRa	_42_55za_52a	ok
+noun	BrU	_42r_55	ok
+noun	vaDU	va_44_55	ok
+noun	vedi	vedi	ok
+noun	SvaSrU	_53va_53r_55	ok
+noun	stuti	stuti	ok
+noun	snuzA	snuz_41	ok
+noun	AcArya	_41c_41rya	ok
+noun	kartar		no_card
+noun	kartar		no_card
+noun	kAla	k_41la	ok
+noun	kfpA	kfp_41	ok
+noun	dAtar		no_card
+noun	dAtar		no_card
+noun	durjana	durjana	ok
+noun	drazwar		no_card
+noun	drazwar		no_card
+noun	DAtar		no_card
+noun	niScaya	ni_53caya	ok
+noun	netar		no_card
+noun	netar		no_card
+noun	paRqita	pa_52qita	ok
+noun	pada	pada	ok
+noun	prAyaScitta	pr_41ya_53citta	ok
+noun	Bartar		no_card
+noun	rakzitar		no_card
+noun	rakzitar		no_card
+noun	vyavahAra	vyavah_41ra	ok
+noun	SAstar		no_card
+noun	srazwar		no_card
+noun	srazwar		no_card
+noun	go	go	ok
+noun	go	go	ok
+noun	gotva		no_card
+noun	GAsa		no_card
+noun	paNka	pa_4eka	ok
+noun	paNka	pa_4eka	ok
+noun	pitar		no_card
+noun	buDa	bu_44a	ok
+noun	mAsa	m_41sa	ok
+noun	yugma	yugma	ok
+noun	rakzaRa	rakza_52a	ok
+noun	SrAdDa	_53r_41d_44a	ok
+noun	udyAna	udy_41na	ok
+noun	kfzi	kfzi	ok
+noun	jIvita	j_49vita	ok
+noun	nideSa	nide_53a	ok
+noun	pASupAlya		no_card
+noun	purohita	purohita	ok
+noun	BakzaRa	_42akza_52a	ok
+noun	Bftaka	_42ftaka	ok
+noun	maraRa	mara_52a	ok
+noun	mitra	mitra	ok
+noun	yudDa	yud_44a	ok
+noun	vARijya	v_41_52ijya	ok
+noun	viDi	vi_44i	ok
+noun	SvaSura	_53va_53ura	ok
+noun	nO	n_4f	ok
+noun	viSvapA		no_card
+noun	viSvapA		no_card
+noun	KalapU		no_card
+noun	KalapU		no_card
+noun	yavakrI		no_card
+noun	yavakrI		no_card
+noun	grAmaRI	gr_41ma_52_49	ok
+noun	amfta	amfta	ok
+noun	upanayana	upanayana	ok
+noun	kara	kara	ok
+noun	kAlidAsa		no_card
+noun	kASI		no_card
+noun	guRa	gu_52a	ok
+noun	dAsa	d_41sa	ok
+noun	dUta	d_55ta	ok
+noun	pAwaliputra	p_41waliputra	ok
+noun	manoraTa	manora_54a	ok
+noun	vastra	vastra	ok
+noun	viDi	vi_44i	ok
+noun	vfka	vfka	ok
+noun	veda	veda	ok
+noun	kfzRa	kfz_52a	ok
+noun	gati	gati	ok
+noun	Catra		no_card
+noun	dugDa	dug_44a	ok
+noun	devakI	devak_49	ok
+noun	pfTvI	pf_54v_49	ok
+noun	vasudeva	vasudeva	ok
+noun	vAta	v_41ta	ok
+noun	vArida		no_card
+noun	SrI	_53r_49	ok
+noun	salila	salila	ok
+noun	upanizad	upanizad	ok
+noun	upavIta	upav_49ta	ok
+noun	kArya	k_41rya	ok
+noun	caraRa	cara_52a	ok
+noun	taqit	taqit	ok
+noun	dfzad	dfzad	ok
+noun	nirvfti	nirvfti	ok
+noun	pozaka	pozaka	ok
+noun	BUBft	_42_55_42ft	ok
+noun	marut	marut	ok
+noun	yozit	yozit	ok
+noun	viSvAsa	vi_53v_41sa	ok
+noun	vftra	vftra	ok
+noun	Sata	_53ata	ok
+noun	Sarad	_53arad	ok
+noun	samiD	sami_44	ok
+noun	sarit	sarit	ok
+noun	sahAya	sah_41ya	ok
+noun	suhfd	suhfd	ok
+adjective	kfzRa	kfz_52a	ok
+adjective	kfzRa	kfz_52a	ok
+adjective	pApa	p_41pa	ok
+adjective	pApa	p_41pa	ok
+adjective	praBUta	pra_42_55ta	ok
+adjective	praBUtA		no_card
+adjective	viDeya		no_card
+adjective	viDeyA		no_card
+adjective	SIta	_53_49ta	ok
+adjective	SItA		no_card
+adjective	nIca	n_49ca	ok
+adjective	nIcA		no_card
+adjective	muKya	mu_4bya	ok
+adjective	muKyA		no_card
+adjective	laGu	la_47u	ok
+adjective	laGu	la_47u	ok
+adjective	laGu	la_47u	ok
+adjective	laGvI		no_card
+adjective	kftsna	kftsna	ok
+adjective	kftsnA		no_card
+adjective	cAru	c_41ru	ok
+adjective	cAru	c_41ru	ok
+adjective	DIra	_44_49ra	ok
+adjective	DIrA		no_card
+adjective	Sveta	_53veta	ok
+adjective	SvetA	_53vet_41	ok
+adjective	apara	apara	ok
+adjective	aparA	apar_41	ok
+adjective	para	para	ok
+adjective	parA	par_41	ok
+adjective	vakra	vakra	ok
+adjective	vakrA		no_card
+adjective	sundara	sundara	ok
+adjective	sundarI	sundar_49	ok
+adjective	daridra	daridra	ok
+adjective	daridrA		no_card
+adjective	vara	vara	ok
+adjective	varA	var_41	ok
+adjective	aDika	a_44ika	ok
+adjective	aDikA		no_card
+adjective	kAmaduGa		no_card
+adjective	kAmaduGA		no_card
+adjective	duzprayukta		no_card
+adjective	duzprayuktA		no_card
+adjective	prayukta		no_card
+adjective	prayuktA		no_card
+adjective	jyezWa	jyez_57a	ok
+adjective	jyezWA	jyez_57_41	ok
+adjective	SrezWa	_53rez_57a	ok
+adjective	SrezWA		no_card
+adjective	Badra	_42adra	ok
+adjective	BadrA	_42adr_41	ok
+adjective	Badra	_42adra	ok
+adjective	saMdigDa		no_card
+adjective	saMdigDA		no_card
+adjective	navIna		no_card
+adjective	navInA		no_card
+adjective	sva	sva	ok
+adjective	svA	sv_41	ok
+adjective	kuSala	ku_53ala	ok
+adjective	kuSalA		no_card
+adjective	trivft	trivft	ok
+adjective	trivft	trivft	ok
+adjective	trivft	trivft	ok
+adjective	durlaBa	durla_42a	ok
+adjective	durlaBA		no_card
+adjective	Bakta	_42akta	ok
+adjective	BaktA		no_card
+adjective	svAdu	sv_41du	ok
+adjective	svAdu	sv_41du	ok
+adjective	svAdu	sv_41du	ok
+other	ataH		no_card
+other	itaH		no_card
+other	atra	atra	ok
+other	itTam	it_54am	ok
+other	aDunA	a_44un_41	ok
+other	evam	evam	ok
+other	adya	adya	ok
+other	ca	ca	ok
+other	kutaH		no_card
+other	eva	eva	ok
+other	tataH		no_card
+other	tatra	tatra	ok
+other	taTA	ta_54_41	ok
+other	tadA	tad_41	ok
+other	iti	iti	ok
+other	sadA	sad_41	ok
+other	iha	iha	ok
+other	kutra	kutra	ok
+other	kva	kva	ok
+other	punaH		no_card
+other	yataH		no_card
+other	yatra	yatra	ok
+other	yaTA	ya_54_41	ok
+other	yadA	yad_41	ok
+other	tu	tu	ok
+other	kiMtu		no_card
+other	sarvatra	sarvatra	ok
+other	kaTam	ka_54am	ok
+other	kadA	kad_41	ok
+other	he	he	ok
+other	iva	iva	ok
+other	na	na	ok
+other	sahasA	sahas_41	ok
+other	saha	saha	ok
+other	aDastAt	a_44ast_41t	ok
+other	ciram	ciram	ok
+other	dIrGam		no_card
+other	hrasvam		no_card
+other	mA	m_41	ok
+other	vA	v_41	ok
+other	namas	namas	ok
+other	sA	s_41	ok
+other	cet		no_card
+other	nityam	nityam	ok
+other	yadi	yadi	ok
+other	samyak	samyak	ok
+other	kaScit		no_card
+other	kiMcit		no_card
+other	na kaScit		no_card
+other	na kiMcit		no_card
+other	api	api	ok
+other	paScAt	pa_53c_41t	ok
+other	vinA	vin_41	ok
