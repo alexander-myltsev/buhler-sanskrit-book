@@ -8,6 +8,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Added
+
+- **Nightly bug hunt 22-11-2026** (GLM 5.3 Flash `glm-5.3-flash`, 22-11-2026).
+  Static hunt over `scripts/`, `src/`, `.githooks/`, `.github/`: 1 HIGH (shared-main-tree
+  pre-commit guard dead on macOS — Windows-only canonical path; auto-fixed in a
+  follow-up PR the same night), 2 MEDIUM (aligner corrupts wrapped table cells;
+  5 of 8 pre-push gates reference checkers absent from this repo) and 2 LOW
+  (undeclared mdast/mdx runtime deps; stale typecheck-skip justification in CI)
+  report-only; 26/26 tests, `tsc`, `py_compile`, `node --check` green.
+  Findings: [BUGHUNT-FINDINGS-buhler-sanskrit-book-22.11.2026.md](https://github.com/gasyoun/buhler-sanskrit-book/blob/main/BUGHUNT-FINDINGS-buhler-sanskrit-book-22.11.2026.md).
+
 ## [0.1.2] - 2026-08-28
 
 ### Fixed
